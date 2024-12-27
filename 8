@@ -1,0 +1,17 @@
+from math import *
+x0 = float(input())
+xs = float(input())
+x2 = float(input())
+x = x0
+y = 2 * sin(0.75 * x)
+d2 = x**2 + y**2
+xmin = x
+ymin = y
+while x <= x2 + xs / 2:
+    y = 2 * sin(0.75 * x)
+    if (x**2 + y**2) < d2:
+        d2 = x**2 + y**2
+        xmin = x
+        ymin = y
+    x += xs
+print(d2, "x = ", xmin, "y = ", ymin)
